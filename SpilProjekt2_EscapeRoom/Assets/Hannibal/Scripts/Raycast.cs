@@ -26,8 +26,9 @@ public class Raycast : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("LockedDoor"))
         {
-            DoorOpen.enabled = true;
-            if (Input.GetKeyDown(KeyCode.E) && getKey == true)
+            Debug.Log("DoorHit");
+            //sDoorOpen.enabled = true;
+            if (Input.GetKeyDown(KeyCode.E)/* && getKey == true*/)
             {
                 door hitDoor = hit.collider.gameObject.GetComponent<door>();
                 hitDoor.toggleDoor();
