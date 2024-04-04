@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 556055544468601325}
   m_Layer: 0
   m_Name: doorPivot
-  m_TagString: Untagged
+  m_TagString: LockedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
