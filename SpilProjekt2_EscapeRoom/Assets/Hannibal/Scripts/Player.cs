@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     public float Speed;
     public float MouseSens;
+    public float lookAngle;
+    private float lookAngleY;
     public float JumpForce;
     public float jumpRay;
     bool Grounded = false;
@@ -42,8 +44,13 @@ public class Player : MonoBehaviour
         //input og logik til camera
         float inputMouseX = Input.GetAxis("Mouse X");
         float inputMouseY = Input.GetAxis("Mouse Y");
-        transform.Rotate(0, inputMouseX * MouseSens, 0);
-        CameraTrans.Rotate(-inputMouseY * MouseSens, 0, 0);
+        lookAngleY += inputMouseX * MouseSens;
+        lookAngle -= inputMouseY * MouseSens;
+        lookAngle = Mathf.Clamp(lookAngle, -90, 90);
+        CameraTrans.localRotation=Quaternion.Euler(lookAngle,0, 0);
+        transform.localRotation=Quaternion.Euler(0,lookAngleY, 0);
+        
+        
         
 
         // input og logik til hop
