@@ -402,23 +402,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1654217889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1234918190131357071, guid: bf50dbcdb246b8b488a7e0f3b2c77a90, type: 3}
-  m_PrefabInstance: {fileID: 1234918191923358750}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1654217894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654217889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2974149c6fb01b409a280581634da96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1660221962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -475,17 +458,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1162900059104191132, guid: a653d3366756c8641befacf512a2be62, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -505,11 +492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_applyRootMotion
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_applyRootMotion
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -520,12 +507,24 @@ PrefabInstance:
       value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
+      propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SM_Door_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
+      propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799272929061306934, guid: a653d3366756c8641befacf512a2be62, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
