@@ -14,7 +14,7 @@ public class Raycast : MonoBehaviour
     public bool OpenDoor = false;
     public bool getKey = false;
     public bool getBlomst = false;
-    public Transform wizPos;
+    public Transform nøgleSpawn;
     public bool wizHarBlomst = false;
     public GameObject minNøgle;
 
@@ -32,7 +32,7 @@ public class Raycast : MonoBehaviour
         {
             Debug.Log("DoorHit");
             //sDoorOpen.enabled = true;
-            if (Input.GetKeyDown(KeyCode.E)/* && getKey == true*/)
+            if (Input.GetKeyDown(KeyCode.E) && getKey == true)
             {
                 door hitDoor = hit.collider.gameObject.GetComponent<door>();
                 hitDoor.toggleDoor();
@@ -67,8 +67,7 @@ public class Raycast : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 wizHarBlomst = true;
-                Destroy(hit.collider.gameObject);
-                Instantiate(minNøgle, wizPos.transform.position, Quaternion.identity);
+                Instantiate(minNøgle, nøgleSpawn.transform.position, Quaternion.identity);
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Key") && wizHarBlomst == true)
