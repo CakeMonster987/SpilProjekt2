@@ -62,7 +62,7 @@ public class Raycast : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Kælling") && getBlomst == true)
         {
-            Debug.Log("Blomst hit");
+            Debug.Log("Kælling hit");
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -73,7 +73,8 @@ public class Raycast : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Key") && wizHarBlomst == true)
         {
-            keyPickup.enabled = true;
+            //keyPickup.enabled = true;
+            Debug.Log("Key hit");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getKey = true;
