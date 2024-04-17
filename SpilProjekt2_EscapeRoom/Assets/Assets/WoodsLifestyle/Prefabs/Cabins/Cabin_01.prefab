@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 447318}
   - component: {fileID: 3332560}
   - component: {fileID: 2305752}
+  - component: {fileID: 7429460934201156105}
   m_Layer: 0
   m_Name: Roof_01_a
   m_TagString: Untagged
@@ -208,6 +209,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7429460934201156105
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 1aff882aa2688ae43bbda7951a2735cc, type: 3}
 --- !u!1 &138400
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,14 +680,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122375022279824625}
-  m_LocalRotation: {x: -0, y: 0.7008553, z: -0, w: 0.7133035}
-  m_LocalPosition: {x: -0.4295383, y: -0.7826667, z: -4.144995}
+  m_LocalRotation: {x: -0.011399714, y: 0.7106935, z: -0.014952042, w: -0.7032506}
+  m_LocalPosition: {x: 1.878, y: -0.784, z: -4.156}
   m_LocalScale: {x: 0.16666661, y: 0.16666667, z: 0.16666661}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 415204}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: -84.612, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.137, y: 269.402, z: 0.277}
 --- !u!212 &7002241139928800511
 SpriteRenderer:
   m_ObjectHideFlags: 0
