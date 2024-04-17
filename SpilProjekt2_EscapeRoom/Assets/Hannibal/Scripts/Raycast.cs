@@ -17,6 +17,8 @@ public class Raycast : MonoBehaviour
     public Transform nøgleSpawn;
     public bool wizHarBlomst = false;
     public GameObject minNøgle;
+    public Animator StenAni;
+    public Animator KnapAni;
 
     private void Start()
     {
@@ -84,7 +86,17 @@ public class Raycast : MonoBehaviour
         {
             //keyPickup.enabled = false;
         }
-        
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
+        {
+            Debug.Log("Knap hit");
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                KnapAni.SetBool("KnapTrykket", true);
+                StenAni.SetBool("RulSten", true);
+            }
+        }
     }
 
     IEnumerator removeLockedText()
