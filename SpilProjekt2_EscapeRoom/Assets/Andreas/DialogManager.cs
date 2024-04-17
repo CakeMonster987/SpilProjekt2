@@ -56,6 +56,20 @@ public class DialogManager : MonoBehaviour
                 skip = false;
                 break;
             }
+
+            string chunkToAdd = string.Empty;
+            chunkToAdd += segment.DialogueToPrint[i];
+            if (segment.DialogueToPrint[i] == ' ' && i < segment.DialogueToPrint.Length -1)
+            {
+                chunkToAdd = segment.DialogueToPrint.Substring(i, 2);
+                i++;
+            }
+
+            BodyText.text += chunkToAdd;
+            yield return new WaitForSeconds(delay);
         }
+
+        PlayingDialogue = false;
+        DialogueIndex++;
     }
 }
