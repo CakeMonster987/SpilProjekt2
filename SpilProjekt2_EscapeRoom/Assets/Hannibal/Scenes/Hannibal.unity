@@ -330,11 +330,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &788814787 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7803024850654263966, guid: a653d3366756c8641befacf512a2be62, type: 3}
-  m_PrefabInstance: {fileID: 1660221962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251648465
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,20 +463,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 788814787}
+      objectReference: {fileID: 2133139366}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2122478929}
+      objectReference: {fileID: 2122478930}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -492,19 +487,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: toggleDoor
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: toggleDoor
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: door, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: door, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2578531442139871056, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -529,11 +524,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a653d3366756c8641befacf512a2be62, type: 3}
---- !u!95 &2122478929 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3762625804529457772, guid: a653d3366756c8641befacf512a2be62, type: 3}
+--- !u!114 &2122478930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2736609824256878405, guid: a653d3366756c8641befacf512a2be62, type: 3}
   m_PrefabInstance: {fileID: 1660221962}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0566e8407b1f5f4386695f6bd825ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2130362429
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +611,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130362429}
   m_CullTransparentMesh: 1
+--- !u!114 &2133139366 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8437548512593097611, guid: a653d3366756c8641befacf512a2be62, type: 3}
+  m_PrefabInstance: {fileID: 1660221962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0566e8407b1f5f4386695f6bd825ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &148353852043257613
 PrefabInstance:
   m_ObjectHideFlags: 0

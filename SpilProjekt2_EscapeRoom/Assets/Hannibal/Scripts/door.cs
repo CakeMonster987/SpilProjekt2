@@ -15,6 +15,7 @@ public class door : MonoBehaviour
     }
     public void toggleDoor()
     {
+        Debug.Log("Dør åbner");
         OpenDoor =!OpenDoor;
         anim.SetBool("OpenDoor", OpenDoor);
     }
