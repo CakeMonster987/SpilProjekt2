@@ -19,6 +19,10 @@ public class Raycast : MonoBehaviour
     public GameObject minNøgle;
     public Animator StenAni;
     public Animator KnapAni;
+    public bool HarGem;
+    [SerializeField] GameObject GemOutline;
+    [SerializeField] GameObject GemSat;
+    public bool GemDone;
 
     private void Start()
     {
@@ -97,6 +101,29 @@ public class Raycast : MonoBehaviour
                 StenAni.SetBool("RulSten", true);
             }
         }
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem"))
+        {
+            Debug.Log("Gem hit");
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HarGem = true;
+                Destroy(hit.collider.gameObject);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("GemOutline") && HarGem == true)
+        {
+            Debug.Log("Gem Outline hit");
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                GemOutline.SetActive(false);
+                GemSat.SetActive(true);
+                GemDone = true;
+            }
+        }
+
     }
 
     IEnumerator removeLockedText()
