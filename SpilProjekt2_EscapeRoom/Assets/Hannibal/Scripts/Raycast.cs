@@ -17,12 +17,13 @@ public class Raycast : MonoBehaviour
     public Transform nøgleSpawn;
     public bool wizHarBlomst = false;
     public GameObject minNøgle;
+
+    public GameObject dialogueButtonPrompt;
+    public GameObject dialogueObject;
+
     public Animator StenAni;
     public Animator KnapAni;
-    public bool HarGem;
-    [SerializeField] GameObject GemOutline;
-    [SerializeField] GameObject GemSat;
-    public bool GemDone;
+
 
     private void Start()
     {
@@ -91,6 +92,32 @@ public class Raycast : MonoBehaviour
             //keyPickup.enabled = false;
         }
 
+ 
+        float maxDistanceFromCharacter = 5f;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling"))
+        {
+            if (dialogueObject.activeSelf == false)
+            {
+                dialogueButtonPrompt.SetActive(true);
+            }
+            else
+            {
+                dialogueButtonPrompt.SetActive(false);
+            }
+
+            //Debug.Log("looking at character and is in range for dialogue");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //Debug.Log("start");
+                dialogueObject.SetActive(true);
+            }
+        }
+        else
+        {
+            dialogueButtonPrompt.SetActive(false);
+        }
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
         {
             Debug.Log("Knap hit");
@@ -99,28 +126,6 @@ public class Raycast : MonoBehaviour
             {
                 KnapAni.SetBool("KnapTrykket", true);
                 StenAni.SetBool("RulSten", true);
-            }
-        }
-
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem"))
-        {
-            Debug.Log("Gem hit");
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                HarGem = true;
-                Destroy(hit.collider.gameObject);
-            }
-        }
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("GemOutline") && HarGem == true)
-        {
-            Debug.Log("Gem Outline hit");
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                GemOutline.SetActive(false);
-                GemSat.SetActive(true);
-                GemDone = true;
             }
         }
 
