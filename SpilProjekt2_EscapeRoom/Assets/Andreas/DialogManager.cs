@@ -31,17 +31,23 @@ public class DialogManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    private void OnEnable()
+    {
         StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex]));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
         {
             if (DialogueIndex == DialogueSegments.Length)
             {
-                enabled = false;
+                DialogueIndex = 0;
+                gameObject.SetActive(false);
                 return;
             }
 
