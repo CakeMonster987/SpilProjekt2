@@ -71,6 +71,11 @@ public class Player : MonoBehaviour
         {
             Grounded = false;
         }
+        
+        
        
+    }
+    public void TeleportTo(Transform destination) {
+        transform.position = destination.position;
     }
 }
