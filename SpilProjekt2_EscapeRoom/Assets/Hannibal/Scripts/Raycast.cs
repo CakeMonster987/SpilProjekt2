@@ -17,6 +17,8 @@ public class Raycast : MonoBehaviour
     public Transform nøgleSpawn;
     public bool wizHarBlomst = false;
     public GameObject minNøgle;
+    public GameObject dialogueButtonPrompt;
+    public GameObject dialogueObject;
 
     private void Start()
     {
@@ -84,7 +86,31 @@ public class Raycast : MonoBehaviour
         {
             //keyPickup.enabled = false;
         }
-        
+
+        float maxDistanceFromCharacter = 5f;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling"))
+        {
+            if (dialogueObject.activeSelf == false)
+            {
+                dialogueButtonPrompt.SetActive(true);
+            }
+            else
+            {
+                dialogueButtonPrompt.SetActive(false);
+            }
+
+            //Debug.Log("looking at character and is in range for dialogue");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //Debug.Log("start");
+                dialogueObject.SetActive(true);
+            }
+        }
+        else
+        {
+            dialogueButtonPrompt.SetActive(false);
+        }
     }
 
     IEnumerator removeLockedText()
