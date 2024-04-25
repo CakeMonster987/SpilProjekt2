@@ -28,6 +28,8 @@ public class Raycast : MonoBehaviour
     public GameObject GemSat;
     public bool GemDone;
 
+    public Player PlayerMov;
+
     private void Start()
     {
         GemOutline.SetActive(false);
@@ -75,7 +77,7 @@ public class Raycast : MonoBehaviour
         {
             Debug.Log("Kælling hit");
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !wizHarBlomst)
             {
                 wizHarBlomst = true;
                 Instantiate(minNøgle, nøgleSpawn.transform.position, Quaternion.identity);
@@ -99,8 +101,9 @@ public class Raycast : MonoBehaviour
  
         float maxDistanceFromCharacter = 5f;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling"))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling") && !getBlomst)
         {
+            /*
             if (dialogueObject.activeSelf == false)
             {
                 dialogueButtonPrompt.SetActive(true);
@@ -109,18 +112,20 @@ public class Raycast : MonoBehaviour
             {
                 dialogueButtonPrompt.SetActive(false);
             }
+            */
 
             //Debug.Log("looking at character and is in range for dialogue");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //Debug.Log("start");
                 dialogueObject.SetActive(true);
+                PlayerMov.enabled = false;
             }
-        }
+        }/*
         else
         {
             dialogueButtonPrompt.SetActive(false);
-        }
+        }*/
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
         {

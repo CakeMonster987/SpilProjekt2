@@ -107,6 +107,14 @@ MonoBehaviour:
   "n\xF8gleSpawn": {fileID: 0}
   wizHarBlomst: 0
   "minN\xF8gle": {fileID: 0}
+  dialogueButtonPrompt: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  StenAni: {fileID: 0}
+  KnapAni: {fileID: 0}
+  HarGem: 0
+  GemOutline: {fileID: 0}
+  GemSat: {fileID: 0}
+  GemDone: 0
 --- !u!114 &5443642212500707039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +221,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234918191477705934}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 46a9532a8165a0b44bf92da91ba0de72, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
