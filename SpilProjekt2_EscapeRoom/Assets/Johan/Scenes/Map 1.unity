@@ -1322,6 +1322,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.125
       objectReference: {fileID: 0}
+    - target: {fileID: 1162900059104191132, guid: a653d3366756c8641befacf512a2be62, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1682145180152159143, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: m_TagString
       value: LockedDoor
