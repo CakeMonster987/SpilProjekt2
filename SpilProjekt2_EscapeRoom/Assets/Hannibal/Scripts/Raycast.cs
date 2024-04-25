@@ -75,7 +75,7 @@ public class Raycast : MonoBehaviour
         {
             Debug.Log("Kælling hit");
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !wizHarBlomst)
             {
                 wizHarBlomst = true;
                 Instantiate(minNøgle, nøgleSpawn.transform.position, Quaternion.identity);
@@ -99,7 +99,7 @@ public class Raycast : MonoBehaviour
  
         float maxDistanceFromCharacter = 5f;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling"))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling") && !getBlomst)
         {
             if (dialogueObject.activeSelf == false)
             {
