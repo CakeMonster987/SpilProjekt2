@@ -28,6 +28,8 @@ public class DialogManager : MonoBehaviour
     private bool PlayingDialogue;
     private bool skip;
 
+    public Player PlayerMov;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,7 @@ public class DialogManager : MonoBehaviour
             {
                 DialogueIndex = 0;
                 gameObject.SetActive(false);
+                PlayerMov.enabled = true;
                 return;
             }
 
