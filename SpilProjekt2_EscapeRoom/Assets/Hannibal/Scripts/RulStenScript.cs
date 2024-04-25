@@ -9,7 +9,7 @@ public class RulStenScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Comma))
         {
             StenAni.SetBool("RulSten", true);
         }

@@ -30,6 +30,7 @@ public class Raycast : MonoBehaviour
 
     private void Start()
     {
+        GemOutline.SetActive(false);
     }
 
     void Update()
@@ -139,6 +140,7 @@ public class Raycast : MonoBehaviour
             {
                 HarGem = true;
                 Destroy(hit.collider.gameObject);
+                GemOutline.SetActive(true);
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("GemOutline") && HarGem == true)
