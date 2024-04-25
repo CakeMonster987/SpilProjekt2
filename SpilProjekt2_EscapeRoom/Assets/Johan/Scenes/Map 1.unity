@@ -746,6 +746,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4148336009893161120}
     - target: {fileID: 1234918190131357067, guid: bf50dbcdb246b8b488a7e0f3b2c77a90, type: 3}
+      propertyPath: TeleportEffect
+      value: 
+      objectReference: {fileID: 2098478979}
+    - target: {fileID: 1234918190131357067, guid: bf50dbcdb246b8b488a7e0f3b2c77a90, type: 3}
       propertyPath: dialogueObject
       value: 
       objectReference: {fileID: 405108123}
@@ -6344,7 +6348,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318796076}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.11567652
   m_Height: 0.5075619
@@ -35360,6 +35364,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 756d99540142b5e4a8d174e18a6310d9, type: 3}
+--- !u!1 &2098478979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d, type: 3}
+  m_PrefabInstance: {fileID: 735462173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2099846303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6d14c332d78870c47a20b16fc9548b09, type: 3}

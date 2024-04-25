@@ -27,6 +27,7 @@ public class Raycast : MonoBehaviour
     public GameObject GemOutline;
     public GameObject GemSat;
     public bool GemDone;
+    public GameObject TeleportEffect;
 
     public Player PlayerMov;
 
@@ -157,6 +158,7 @@ public class Raycast : MonoBehaviour
                 GemOutline.SetActive(false);
                 GemSat.SetActive(true);
                 GemDone = true;
+                TeleportEffect.SetActive(true);
             }
         }
 
