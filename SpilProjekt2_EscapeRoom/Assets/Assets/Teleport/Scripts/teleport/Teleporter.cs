@@ -9,6 +9,7 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
         public string destSpawnName;
 
         void OnTriggerEnter(Collider collider) {
+            Debug.Log((collider.gameObject.name));
             Teleportable teleportable = collider.GetComponent<Teleportable>();
             if (teleportable != null) {
                 OnEnter(teleportable);
@@ -30,7 +31,7 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
 
         private IEnumerator TeleportToNewScene(string sceneName, Teleportable teleportable) {
             Scene currentScene = SceneManager.GetActiveScene();
-            AsyncOperation newSceneAsyncLoad = SceneManager.LoadSceneAsync(destinationScene.name, LoadSceneMode.Additive);
+            AsyncOperation newSceneAsyncLoad = SceneManager.LoadSceneAsync(destinationScene.name);
 
             while (!newSceneAsyncLoad.isDone) {
                 yield return null;

@@ -30,7 +30,7 @@ public class Raycast : MonoBehaviour
     public GameObject TeleportEffect;
     public GameObject TeleportTrigger;
 
-    public Player PlayerMov;
+    public CharacterController PlayerMov;
 
     private void Start()
     {
