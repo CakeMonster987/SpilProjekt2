@@ -123,11 +123,11 @@ public class Raycast : MonoBehaviour
                 dialogueObject.SetActive(true);
                 PlayerMov.enabled = false;
             }
-        }/*
+        }
         else
         {
             dialogueButtonPrompt.SetActive(false);
-        }*/
+        }
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
         {
