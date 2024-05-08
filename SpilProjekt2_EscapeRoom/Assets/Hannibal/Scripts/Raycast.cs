@@ -28,6 +28,7 @@ public class Raycast : MonoBehaviour
     public GameObject GemSat;
     public bool GemDone;
     public GameObject TeleportEffect;
+    public GameObject TeleportTrigger;
 
     public Player PlayerMov;
 
@@ -162,7 +163,10 @@ public class Raycast : MonoBehaviour
             }
         }
 
-
+        if (GemDone == true)
+        {
+            TeleportTrigger.SetActive(true);
+        }
     }
 
     IEnumerator removeLockedText()
