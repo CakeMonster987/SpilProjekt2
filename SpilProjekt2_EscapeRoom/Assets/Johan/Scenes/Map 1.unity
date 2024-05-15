@@ -2479,6 +2479,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74757746553897682, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1105448373}
     - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GemSat
       value: 
@@ -2527,6 +2531,10 @@ PrefabInstance:
       propertyPath: dialogueButtonPrompt
       value: 
       objectReference: {fileID: 405108124}
+    - target: {fileID: 891138633213308465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 7510335949793436016, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: StenAni
       value: 
@@ -19487,6 +19495,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a415f7e28e4e14745baf5cc6fee63b1e, type: 3}
   m_PrefabInstance: {fileID: 1411902090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1105448373 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8886097921034097735, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 115561619}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1108020919 stripped
 GameObject:
