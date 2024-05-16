@@ -34,6 +34,13 @@ public class Raycast : MonoBehaviour
     public CharacterController PlayerMov;
 
     //Map 2 relaterede variabler
+    public GameObject Gem2;
+    public bool HarGem2;
+    public GameObject Gem2Outline;
+    public GameObject Gem2Sat;
+    public bool Gem2Done;
+    public GameObject TeleportEffect2;
+
     public GameObject Kranie;
     public bool HarKranie;
     public GameObject KranieGold;
@@ -169,6 +176,27 @@ public class Raycast : MonoBehaviour
 
 
         //Map 2 ting :D
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem2"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HarGem2 = true;
+                Destroy(hit.collider.gameObject);
+                Gem2Outline.SetActive(true);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem2Outline")&&HarGem2==true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Gem2Done = true;
+                Gem2Outline.SetActive(false);
+                Gem2Sat.SetActive(true);
+                TeleportEffect2.SetActive(true);
+            }
+        }
+
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Kranie"))
         {
             if (Input.GetKeyDown(KeyCode.E))
