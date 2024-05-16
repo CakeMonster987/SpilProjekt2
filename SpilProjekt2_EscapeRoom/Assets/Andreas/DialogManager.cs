@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Scene_Teleportation_Kit.Scripts.player;
 using TMPro;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ public class DialogManager : MonoBehaviour
     private bool PlayingDialogue;
     private bool skip;
 
-    public Player PlayerMov;
+    public CharacterController PlayerMov;
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +47,9 @@ public class DialogManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
         {
-            if (DialogueIndex == DialogueSegments.Length)
+            if (DialogueIndex >= DialogueSegments.Length)
             {
+                Debug.Log("can move again");
                 DialogueIndex = 0;
                 gameObject.SetActive(false);
                 PlayerMov.enabled = true;

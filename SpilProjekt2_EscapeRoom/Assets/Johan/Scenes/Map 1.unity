@@ -8104,7 +8104,11 @@ PrefabInstance:
     - target: {fileID: 2713844772974333891, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: PlayerMov
       value: 
-      objectReference: {fileID: 1708887173}
+      objectReference: {fileID: 115561620}
+    - target: {fileID: 7811056712694094748, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
@@ -30646,17 +30650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StenAni: {fileID: 1977517115}
---- !u!114 &1708887173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1234918191477705935, guid: bf50dbcdb246b8b488a7e0f3b2c77a90, type: 3}
-  m_PrefabInstance: {fileID: 23086993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708887170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 209599647adaf6d4ca739583d83bdc8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1711468293
 PrefabInstance:
   m_ObjectHideFlags: 0
