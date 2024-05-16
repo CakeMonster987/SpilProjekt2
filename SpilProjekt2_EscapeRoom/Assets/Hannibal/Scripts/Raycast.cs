@@ -8,6 +8,7 @@ using TMPro;
 
 public class Raycast : MonoBehaviour
 {
+    //Map 1 relaterede variabler
     [SerializeField] private TextMeshProUGUI DoorOpen;
     [SerializeField] private TextMeshProUGUI keyPickup;
     [SerializeField] private TextMeshProUGUI locked;
@@ -32,6 +33,16 @@ public class Raycast : MonoBehaviour
 
     public CharacterController PlayerMov;
 
+    //Map 2 relaterede variabler
+    public GameObject Kranie;
+    public bool HarKranie;
+    public GameObject KranieGold;
+    public bool HarKG;
+    public GameObject KranieOutline;
+    public bool KranieFærdig;
+    public GameObject kgDone;
+
+
     private void Start()
     {
         GemOutline.SetActive(false);
@@ -45,7 +56,6 @@ public class Raycast : MonoBehaviour
         
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("LockedDoor"))
         {
-            Debug.Log("DoorHit");
             //sDoorOpen.enabled = true;
             if (Input.GetKeyDown(KeyCode.E) && getKey == true)
             {
@@ -67,8 +77,6 @@ public class Raycast : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Blomst"))
         {
-            Debug.Log("Blomst hit");
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getBlomst = true;
@@ -77,8 +85,6 @@ public class Raycast : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Kælling") && getBlomst == true)
         {
-            Debug.Log("Kælling hit");
-
             if (Input.GetKeyDown(KeyCode.E) && !wizHarBlomst)
             {
                 wizHarBlomst = true;
@@ -88,7 +94,6 @@ public class Raycast : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Key") && wizHarBlomst == true)
         {
             //keyPickup.enabled = true;
-            Debug.Log("Key hit");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getKey = true;
@@ -131,8 +136,6 @@ public class Raycast : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
         {
-            Debug.Log("Knap hit");
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 KnapAni.SetBool("KnapTrykket", true);
@@ -141,8 +144,6 @@ public class Raycast : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem"))
         {
-            Debug.Log("Gem hit");
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 HarGem = true;
@@ -152,8 +153,6 @@ public class Raycast : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("GemOutline") && HarGem == true)
         {
-            Debug.Log("Gem Outline hit");
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GemOutline.SetActive(false);
@@ -167,6 +166,40 @@ public class Raycast : MonoBehaviour
         {
             TeleportTrigger.SetActive(true);
         }
+
+
+        //Map 2 ting :D
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Kranie"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HarKranie = true;
+                Destroy(hit.collider.gameObject);
+                KranieGold.SetActive(true);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("KranieGold") && HarKranie == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HarKG = true;
+                Destroy(hit.collider.gameObject);
+                KranieOutline.SetActive(true);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("KranieOutline") && HarKG == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HarKG = true;
+                kgDone.SetActive(true);
+                KranieOutline.SetActive(false);
+                KranieFærdig = true;
+            }
+        }
+
+
+
     }
 
     IEnumerator removeLockedText()
