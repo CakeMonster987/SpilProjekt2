@@ -22257,6 +22257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform_blue
       objectReference: {fileID: 0}
+    - target: {fileID: 2135442747430919912, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
+      propertyPath: m_Range
+      value: 6.8303194
+      objectReference: {fileID: 0}
     - target: {fileID: 2363790218711661793, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.19
