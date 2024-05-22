@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Skull
   m_EditorClassIdentifier: 
   name: Skull
-  GameObject: {fileID: 7436960334708570114, guid: 52d7cfb6572391e488c86985e8f073ae, type: 3}
+  GameObject: {fileID: 2462382017309286738, guid: d07c913e3d4ab8d458d05b6c3764c9e7, type: 3}
