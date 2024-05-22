@@ -2179,7 +2179,7 @@ MonoBehaviour:
     skippable: 1
     LettersPerSecond: 25
   - SubjectText: Skeleton
-    DialogueToPrint: before i got trapped i had been searching for them for decades
+    DialogueToPrint: before i got trapped i had been searching for it for decades
       with my friends.
     skippable: 1
     LettersPerSecond: 25
@@ -2193,7 +2193,7 @@ MonoBehaviour:
     skippable: 1
     LettersPerSecond: 25
   - SubjectText: Skeleton
-    DialogueToPrint: 
+    DialogueToPrint: to help you on, you need to find 1 of my old friends named Frank.
     skippable: 1
     LettersPerSecond: 25
   SubjectText: {fileID: 736491471}
