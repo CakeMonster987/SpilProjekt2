@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5ff0dd48ef21b409bbdd7c773ab91a, type: 3}
+  m_Name: Love Essence
+  m_EditorClassIdentifier: 
+  name: Love Essence
+  GameObject: {fileID: 4748893881623106491, guid: eccf5fd8bc0e27b43812bbbbe2496a5c, type: 3}

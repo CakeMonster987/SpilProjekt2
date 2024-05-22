@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f2d0b55df15f14ab65cdc048b1451e, type: 3}
+  m_Name: GoldSkull
+  m_EditorClassIdentifier: 
+  NameOfPotion: Golden Skull Tonic
+  NamesOfIngrdients:
+  - {fileID: 11400000, guid: c41923495ddbe1b4ab053c296cc07d6b, type: 2}
+  - {fileID: 11400000, guid: 528403ea0f7965a4ebf21f4a673be2fe, type: 2}
+  - {fileID: 11400000, guid: 49ab7f0ea3b8c0a438eac6da3a8d8586, type: 2}
