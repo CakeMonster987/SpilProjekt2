@@ -9,6 +9,14 @@ TagManager:
   - Blomst
   - "K\xE6lling"
   - Key
+  - CinemachineTarget
+  - GemOutline
+  - KranieGold
+  - KranieOutline
+  - skeleton
+  - Gem2
+  - Kranie
+  - Gem2Outline
   layers:
   - Default
   - TransparentFX
@@ -16,8 +24,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - wizard
+  - skeleton
   - 
   - 
   - 

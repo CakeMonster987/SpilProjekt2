@@ -20,7 +20,8 @@ public class Raycast : MonoBehaviour
     public GameObject minNøgle;
 
     public GameObject dialogueButtonPrompt;
-    public GameObject dialogueObject;
+    public GameObject WizardDialogue;
+    public GameObject SkeletonDialogue;
 
     public Animator StenAni;
     public Animator KnapAni;
@@ -129,10 +130,16 @@ public class Raycast : MonoBehaviour
             */
 
             //Debug.Log("looking at character and is in range for dialogue");
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && hit.collider.gameObject.layer == 6)
             {
                 //Debug.Log("start");
-                dialogueObject.SetActive(true);
+                WizardDialogue.SetActive(true);
+                PlayerMov.enabled = false;
+            }
+            if (Input.GetKeyDown(KeyCode.E) && hit.collider.gameObject.layer == 7)
+            {
+                //Debug.Log("start");
+                SkeletonDialogue.SetActive(true);
                 PlayerMov.enabled = false;
             }
         }
