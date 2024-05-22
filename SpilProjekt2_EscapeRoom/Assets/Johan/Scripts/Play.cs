@@ -9,6 +9,8 @@ public class Play : MonoBehaviour
 
     public void loadLevel()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(levelName);
     }
 }
