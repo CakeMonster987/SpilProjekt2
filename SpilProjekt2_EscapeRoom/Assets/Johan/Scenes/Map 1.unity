@@ -2535,6 +2535,14 @@ PrefabInstance:
       propertyPath: dialogueButtonPrompt
       value: 
       objectReference: {fileID: 405108124}
+    - target: {fileID: 597928428605250597, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 985197062}
+    - target: {fileID: 597928428605250597, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 1356216464}
     - target: {fileID: 891138633213308465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_TagString
       value: MainCamera
@@ -8105,17 +8113,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2019111715509228151, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseRemover
+      objectReference: {fileID: 0}
     - target: {fileID: 2713844772974333891, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: PlayerMov
       value: 
       objectReference: {fileID: 115561620}
+    - target: {fileID: 3785577191540197530, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 985197061}
+    - target: {fileID: 4378100462890291516, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: levelName
+      value: Map 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4965743010217036290, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303496905261870414, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7811056712694094748, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826476521158181711, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: press
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -17855,6 +17883,28 @@ CapsuleCollider:
   m_Height: 4.81
   m_Direction: 1
   m_Center: {x: 0, y: 1.19, z: 0}
+--- !u!114 &985197061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 597928428605250597, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 115561619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5904e0077e81d0f47beb703ad74e1230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &985197062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 115561619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &990994489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a415f7e28e4e14745baf5cc6fee63b1e, type: 3}
@@ -23754,6 +23804,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e9b774b1e10e3e498b9104d2bdf9e95, type: 3}
+--- !u!1 &1356216464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5246660610694326263, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+  m_PrefabInstance: {fileID: 405108122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1362413064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e9b774b1e10e3e498b9104d2bdf9e95, type: 3}
