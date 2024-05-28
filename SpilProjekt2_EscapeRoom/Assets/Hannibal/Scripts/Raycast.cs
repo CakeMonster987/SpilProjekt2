@@ -67,7 +67,9 @@ public class Raycast : MonoBehaviour
     public bool harKey2;
     public bool SkeletHarMønt;
 
-
+    public Animator Kronk;
+    public bool ForkerteHåndtag;
+    public Animator Kiste;
 
     private void Start()
     {
@@ -344,7 +346,18 @@ public class Raycast : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
         }
-
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Lever") && KranieFærdig == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Kronk.SetBool("Kronk", true);
+                ForkerteHåndtag = true;
+            }
+        }
+        if(ForkerteHåndtag == true)
+        {
+            Kiste.SetBool("Move", true);
+        }
 
 
     }
