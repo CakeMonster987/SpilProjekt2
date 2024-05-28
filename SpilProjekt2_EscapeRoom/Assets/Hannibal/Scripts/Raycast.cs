@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 
 public class Raycast : MonoBehaviour
@@ -71,6 +72,7 @@ public class Raycast : MonoBehaviour
     public bool ForkerteHåndtag;
     public Animator Kiste;
 
+    [SerializeField] private UnityEvent onLeverPull;
     private void Start()
     {
         GemOutline.SetActive(false);
@@ -203,6 +205,7 @@ public class Raycast : MonoBehaviour
             {
                 KnapAni.SetBool("KnapTrykket", true);
                 StenAni.SetBool("RulSten", true);
+                onLeverPull.Invoke();
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem"))
@@ -249,6 +252,7 @@ public class Raycast : MonoBehaviour
                 Gem2Outline.SetActive(false);
                 Gem2Sat.SetActive(true);
                 TeleportEffect2.SetActive(true);
+                TeleportTrigger.SetActive(true);
             }
         }
 
@@ -331,11 +335,12 @@ public class Raycast : MonoBehaviour
                 SkeletHarMønt = true;
             }
         }
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("BadToTheBones") && SkeletHarMønt == true)
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("BadToTheBones") && SkeletHarMønt == true && !harKey2 == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Instantiate(Key2, KeySpawn2.transform.position, Quaternion.identity);
+                harKey2 = true;
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Key"))
@@ -352,6 +357,7 @@ public class Raycast : MonoBehaviour
             {
                 Kronk.SetBool("Kronk", true);
                 ForkerteHåndtag = true;
+                onLeverPull.Invoke();
             }
         }
         if(ForkerteHåndtag == true)
