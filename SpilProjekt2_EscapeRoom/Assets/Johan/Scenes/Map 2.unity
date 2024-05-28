@@ -24722,6 +24722,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7885547758397120975, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: PlayerMov
+      value: 
+      objectReference: {fileID: 1245547403}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
@@ -27510,6 +27514,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3768427471517917351, guid: fdaea2623be08f44389af75cb9c492f7, type: 3}
   m_PrefabInstance: {fileID: 822135612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &827332863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2108042657072546343, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+  m_PrefabInstance: {fileID: 741564701}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &829526521 stripped
 Transform:
@@ -40985,6 +40994,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1840038406}
     - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: SkeletonDialogue
+      value: 
+      objectReference: {fileID: 827332863}
+    - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: dialogueButtonPrompt
       value: 
       objectReference: {fileID: 741564703}
@@ -43917,8 +43930,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.956707, z: 1}
+  m_Center: {x: 0, y: 0.9783524, z: 0}
 --- !u!95 &1334946477
 Animator:
   serializedVersion: 4

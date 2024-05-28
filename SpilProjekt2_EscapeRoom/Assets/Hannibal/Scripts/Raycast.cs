@@ -166,6 +166,34 @@ public class Raycast : MonoBehaviour
         {
             dialogueButtonPrompt.SetActive(false);
         }
+        
+        
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("BadToTheBones") && !harMønt)
+        {
+            
+            /* if (dialogueObject.activeSelf == false)
+             {
+                 dialogueButtonPrompt.SetActive(true);
+             }
+             else
+             {
+                 dialogueButtonPrompt.SetActive(false);
+             }
+             */
+
+            Debug.Log("looking at character and is in range for dialogue");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //Debug.Log("start");
+                SkeletonDialogue.SetActive(true);
+                PlayerMov.enabled = false;
+            }
+        }
+        else
+        {
+            dialogueButtonPrompt.SetActive(false);
+        }
+        
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Knap"))
         {
@@ -318,6 +346,7 @@ public class Raycast : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getKey = true;
+                Destroy(hit.collider.gameObject);
             }
         }
 
