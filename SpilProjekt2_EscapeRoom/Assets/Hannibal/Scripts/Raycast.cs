@@ -55,7 +55,10 @@ public class Raycast : MonoBehaviour
     
     public bool getEmber;
     public bool getVenom;
-    
+
+    public GameObject TP1;
+    public GameObject TP2;
+    public GameObject Spiller;
 
     private void Start()
     {
@@ -266,8 +269,16 @@ public class Raycast : MonoBehaviour
                 KranieGold.SetActive(true);
             }
         }
-        
-        
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("TP1"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("TP1 Hit");
+                Spiller.transform.position = new Vector3(TP1.transform.position.x,TP1.transform.position.y,TP1.transform.position.z);
+            }
+        }
+
+
 
     }
 
