@@ -59,6 +59,16 @@ public class Raycast : MonoBehaviour
     public GameObject TP1;
     public GameObject TP2;
     public GameObject Spiller;
+
+    public GameObject Mønt;
+    public bool harMønt;
+    public Transform KeySpawn2;
+    public GameObject Key2;
+    public bool harKey2;
+    public bool SkeletHarMønt;
+
+
+
     private void Start()
     {
         GemOutline.SetActive(false);
@@ -275,14 +285,44 @@ public class Raycast : MonoBehaviour
             hit.collider.gameObject.CompareTag("Grave"))
         {
             
-            //sDoorOpen.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GraveAnim hitGrave = hit.collider.gameObject.GetComponent<GraveAnim>();
                 hitGrave.graveAnimator();
-
             }
         }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Mønt"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                harMønt = true;
+                Destroy(hit.collider.gameObject);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("BadToTheBones") && harMønt == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SkeletHarMønt = true;
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("BadToTheBones") && SkeletHarMønt == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Instantiate(Key2, KeySpawn2.transform.position, Quaternion.identity);
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Key"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                getKey = true;
+            }
+        }
+
+
+
     }
 
     IEnumerator removeLockedText()
