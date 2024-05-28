@@ -34,7 +34,16 @@ public class DialogManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (DialogueSegments.Length > 0)
+        {
+            DialogueIndex = 0;
+            PlayerMov.enabled = true; // Ensure player movement is enabled initially
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("No dialogue segments assigned!");
+        }
     }
 
     private void OnEnable()
