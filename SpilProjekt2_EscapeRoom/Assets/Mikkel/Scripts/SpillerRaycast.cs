@@ -31,12 +31,20 @@ public class SpillerRaycast : MonoBehaviour
                 Debug.Log("TP1 Hit");
                 //this.transform.position = new Vector3(TP1.transform.position.x, TP1.transform.position.y, TP1.transform.position.z);
                 _controller.enabled = false;
+                transform.position = TP2.transform.position;
+                _controller.enabled = true;
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("TP2"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("TP1 Hit");
+                //this.transform.position = new Vector3(TP1.transform.position.x, TP1.transform.position.y, TP1.transform.position.z);
+                _controller.enabled = false;
                 transform.position = TP1.transform.position;
                 _controller.enabled = true;
             }
         }
-
-
-
     }
 }
