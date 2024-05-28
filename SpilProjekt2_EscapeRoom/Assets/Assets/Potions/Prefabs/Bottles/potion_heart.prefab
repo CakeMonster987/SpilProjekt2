@@ -33,7 +33,7 @@ Transform:
   - {fileID: 5241831823328989514}
   - {fileID: 5122063322267463421}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &854602199737994621
 MeshFilter:
@@ -173,6 +173,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1400419545354781744}
     m_Modifications:
     - target: {fileID: 4993693781550940654, guid: efe674c5c623ddc4c97dca173ca99cfd, type: 3}
@@ -240,6 +241,7 @@ PrefabInstance:
       value: cap_cork1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: efe674c5c623ddc4c97dca173ca99cfd, type: 3}
 --- !u!4 &5122063322267463421 stripped
 Transform:
