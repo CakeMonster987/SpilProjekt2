@@ -18,7 +18,6 @@ public class TeleportToNextArea : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space)) 
         {
-            player.transform.position = new Vector3(TP1.transform.position.x, TP1.transform.position.y, TP1.transform.position.z);
         }
     }
 

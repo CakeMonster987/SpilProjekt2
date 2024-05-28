@@ -35,6 +35,7 @@ public class SpillerRaycast : MonoBehaviour
                 _controller.enabled = true;
             }
         }
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("TP2"))
         {
             if (Input.GetKeyDown(KeyCode.E))
