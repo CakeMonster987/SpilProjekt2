@@ -85,7 +85,7 @@ public class AN_PlugScript : MonoBehaviour
         else return false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEntersCollider other)
     {
         if (other == Socket)
         {

@@ -68,9 +68,10 @@ public class Raycast : MonoBehaviour
     void Update()
     {
 
+
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward*3, Color.red);
-        
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("LockedDoor"))
         {
             //sDoorOpen.enabled = true;
@@ -122,7 +123,7 @@ public class Raycast : MonoBehaviour
             //keyPickup.enabled = false;
         }
 
- 
+
         float maxDistanceFromCharacter = 5f;
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling") && !getBlomst)
@@ -201,7 +202,7 @@ public class Raycast : MonoBehaviour
                 Gem2Outline.SetActive(true);
             }
         }
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem2Outline")&&HarGem2==true)
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("Gem2Outline") && HarGem2 == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -269,17 +270,6 @@ public class Raycast : MonoBehaviour
                 KranieGold.SetActive(true);
             }
         }
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("TP1"))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("TP1 Hit");
-                Spiller.transform.position = new Vector3(TP1.transform.position.x,TP1.transform.position.y,TP1.transform.position.z);
-            }
-        }
-
-
-
     }
 
     IEnumerator removeLockedText()

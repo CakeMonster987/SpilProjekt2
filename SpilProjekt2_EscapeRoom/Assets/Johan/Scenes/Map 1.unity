@@ -2520,6 +2520,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2098478979}
     - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: WizardDialogue
+      value: 
+      objectReference: {fileID: 405108123}
+    - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: dialogueObject
       value: 
       objectReference: {fileID: 405108123}
@@ -8105,6 +8109,10 @@ PrefabInstance:
       propertyPath: PlayerMov
       value: 
       objectReference: {fileID: 115561620}
+    - target: {fileID: 4965743010217036290, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7811056712694094748, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: m_IsActive
       value: 0

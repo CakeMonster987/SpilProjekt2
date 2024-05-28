@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     bool Grounded = false;
     Raycast rayScript;
     public bool SpillerDød;
+    public GameObject TP1;
 
 
     // Start is called before the first frame update
@@ -78,4 +79,5 @@ public class Player : MonoBehaviour
     public void TeleportTo(Transform destination) {
         transform.position = destination.position;
     }
+    
 }

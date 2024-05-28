@@ -108,7 +108,8 @@ MonoBehaviour:
   wizHarBlomst: 0
   "minN\xF8gle": {fileID: 0}
   dialogueButtonPrompt: {fileID: 0}
-  dialogueObject: {fileID: 0}
+  WizardDialogue: {fileID: 0}
+  SkeletonDialogue: {fileID: 0}
   StenAni: {fileID: 0}
   KnapAni: {fileID: 0}
   HarGem: 0
@@ -118,6 +119,26 @@ MonoBehaviour:
   TeleportEffect: {fileID: 0}
   TeleportTrigger: {fileID: 0}
   PlayerMov: {fileID: 0}
+  Gem2: {fileID: 0}
+  HarGem2: 0
+  Gem2Outline: {fileID: 0}
+  Gem2Sat: {fileID: 0}
+  Gem2Done: 0
+  TeleportEffect2: {fileID: 0}
+  Kranie: {fileID: 0}
+  HarKranie: 0
+  KranieGold: {fileID: 0}
+  HarKG: 0
+  KranieOutline: {fileID: 0}
+  "KranieF\xE6rdig": 0
+  kgDone: {fileID: 0}
+  currentlyHolding: {fileID: 0}
+  lookingAt: {fileID: 0}
+  getEmber: 0
+  getVenom: 0
+  TP1: {fileID: 0}
+  TP2: {fileID: 0}
+  Spiller: {fileID: 0}
 --- !u!114 &74757746553897682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8997996947095583982}
   - component: {fileID: 8616685848737228382}
+  - component: {fileID: 6771356694625898533}
   - component: {fileID: 8616685848737228371}
   - component: {fileID: 1978471637655604388}
   - component: {fileID: 5420857361349278248}
@@ -318,6 +340,20 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.93, z: 0}
+--- !u!114 &6771356694625898533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a8c706b9f1fb1428e3af2292be1068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TP1: {fileID: 0}
+  TP2: {fileID: 0}
 --- !u!114 &8616685848737228371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +383,7 @@ MonoBehaviour:
   CinemachineCameraTarget: {fileID: 4135013735270702863}
   TopClamp: 89
   BottomClamp: -89
+  TP1: {fileID: 0}
 --- !u!114 &1978471637655604388
 MonoBehaviour:
   m_ObjectHideFlags: 0
