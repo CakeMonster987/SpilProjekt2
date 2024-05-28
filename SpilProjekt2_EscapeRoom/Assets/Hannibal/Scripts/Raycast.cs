@@ -128,8 +128,8 @@ public class Raycast : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistanceFromCharacter) && hit.collider.gameObject.CompareTag("Kælling") && !getBlomst)
         {
-            /*
-            if (dialogueObject.activeSelf == false)
+            
+           /* if (dialogueObject.activeSelf == false)
             {
                 dialogueButtonPrompt.SetActive(true);
             }
@@ -139,8 +139,8 @@ public class Raycast : MonoBehaviour
             }
             */
 
-            //Debug.Log("looking at character and is in range for dialogue");
-            if (Input.GetKeyDown(KeyCode.E) && hit.collider.gameObject.layer == 6)
+            Debug.Log("looking at character and is in range for dialogue");
+            if (Input.GetKeyDown(KeyCode.E) /*&& hit.collider.gameObject.layer == 6*/)
             {
                 //Debug.Log("start");
                 WizardDialogue.SetActive(true);
