@@ -13802,11 +13802,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7cfb6572391e488c86985e8f073ae, type: 3}
---- !u!1 &436073307 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5435153713665607807, guid: 96f65da2b1bd25a4f84475e2a3b04204, type: 3}
-  m_PrefabInstance: {fileID: 4715985240441325171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &438781189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4521874486784168, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
@@ -40746,7 +40741,7 @@ PrefabInstance:
     - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: KranieGold
       value: 
-      objectReference: {fileID: 436073307}
+      objectReference: {fileID: 4715985240441325172}
     - target: {fileID: 359567268669905209, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: Gem2Outline
       value: 
@@ -67985,6 +67980,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: House
       objectReference: {fileID: 0}
+    - target: {fileID: 5790498850648449694, guid: 96f65da2b1bd25a4f84475e2a3b04204, type: 3}
+      propertyPath: m_TagString
+      value: Cooker
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f65da2b1bd25a4f84475e2a3b04204, type: 3}
+--- !u!1 &4715985240441325172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5845169490998661542, guid: 96f65da2b1bd25a4f84475e2a3b04204, type: 3}
+  m_PrefabInstance: {fileID: 4715985240441325171}
+  m_PrefabAsset: {fileID: 0}

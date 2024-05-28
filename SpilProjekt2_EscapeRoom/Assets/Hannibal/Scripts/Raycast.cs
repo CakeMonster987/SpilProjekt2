@@ -262,9 +262,14 @@ public class Raycast : MonoBehaviour
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
-            hit.collider.gameObject.CompareTag("Cooker") && getEmber == true && getVenom == true && HarKranie == true && Input.GetKeyDown(KeyCode.E))
+            hit.collider.gameObject.CompareTag("Cooker") && getEmber == true && getVenom == true && HarKranie == true)
         {
+            Debug.Log("cooker");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                
                 KranieGold.SetActive(true);
+            }
         }
     }
 
