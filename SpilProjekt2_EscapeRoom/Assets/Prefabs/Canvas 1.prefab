@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 7934135831885683235}
   - component: {fileID: 7986181466950328763}
   - component: {fileID: 8826476521158181711}
-  - component: {fileID: 3755092731280052519}
+  - component: {fileID: 2813545497560068900}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -1052,9 +1052,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3755092731280052519}
-        m_TargetAssemblyTypeName: Play, Assembly-CSharp
-        m_MethodName: loadLevel
+      - m_Target: {fileID: 2813545497560068900}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1064,7 +1064,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3755092731280052519
+--- !u!114 &2813545497560068900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1690224259937612185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322da8ea91d0d0b44ba1f16293f8d393, type: 3}
+  m_Script: {fileID: 11500000, guid: f836cf7df6e692e4781ac0c9520dcec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Menu
@@ -1170,7 +1170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2242458020336462549
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1380,6 +1380,7 @@ GameObject:
   - component: {fileID: 3973933038319951700}
   - component: {fileID: 4492123413808246482}
   - component: {fileID: 5303496905261870414}
+  - component: {fileID: 4378100462890291516}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -1489,7 +1490,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4492123413808246482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4378100462890291516}
+        m_TargetAssemblyTypeName: Play, Assembly-CSharp
+        m_MethodName: loadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4378100462890291516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346309792276563541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322da8ea91d0d0b44ba1f16293f8d393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: 
 --- !u!1 &6633149897896173048
 GameObject:
   m_ObjectHideFlags: 0
