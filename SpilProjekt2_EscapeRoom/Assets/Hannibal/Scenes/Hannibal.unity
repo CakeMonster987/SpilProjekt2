@@ -1272,6 +1272,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2713844772974333891, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: PlayerMov
+      value: 
+      objectReference: {fileID: 1840827989}
     - target: {fileID: 3785577191540197530, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: pause
       value: 
@@ -1284,6 +1288,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7811056712694094748, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: m_Name
+      value: dialog background Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885547758397120975, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
+      propertyPath: PlayerMov
+      value: 
+      objectReference: {fileID: 1840827989}
     - target: {fileID: 8826476521158181711, guid: 683e2f0d5e819b544862ba08946a5c93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
