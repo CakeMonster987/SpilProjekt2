@@ -50,6 +50,12 @@ public class Raycast : MonoBehaviour
     public bool KranieFærdig;
     public GameObject kgDone;
 
+    public Ingridients currentlyHolding;
+    public Ingridients lookingAt;
+    
+    public bool getEmber;
+    public bool getVenom;
+    
 
     private void Start()
     {
@@ -233,7 +239,35 @@ public class Raycast : MonoBehaviour
             }
         }
 
-
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
+            hit.collider.gameObject.CompareTag("Ember"))
+        {
+            Debug.Log("Ember");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                getEmber = true;
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
+            hit.collider.gameObject.CompareTag("Venom"))
+        {
+            Debug.Log("Venom");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                getVenom = true;
+            }
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
+            hit.collider.gameObject.CompareTag("Cooker") && getEmber == true && getVenom == true && HarKranie == true)
+        {
+            Debug.Log("Cooker");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                KranieGold.SetActive(true);
+            }
+        }
+        
+        
 
     }
 

@@ -9,29 +9,42 @@ public class Cooker : MonoBehaviour
     public GameObject LoveEssence;
     public GameObject LiquidGold;
     private int cookingCondition;
-    public List<Ingridients> IngridientsNeeded = new();
+    //public List<Ingridients> IngridientsNeeded = new();
     public List<Ingridients> currentIngridient = new();
     public GameObject spawnPoint;
     public NoteCreater CurrentNote;
     private NoteCreater noteLastFrame;
-    private Ingridients addIngridients;
+    public NoteCreater recipe1;
     
     // Start is called before the first frame update
     void Start()
     {
-        UpdateIngridients();
+        
     }
+    
 
-    // Update is called once per frame
-    void Update()
+
+    public void AddIngredientToCooker(Ingridients ingredient)
     {
-        if (currentIngridient.Count == IngridientsNeeded.Count)
+        currentIngridient.Add((ingredient));
+        bool ingridentsMatch = true;
+        foreach (var ingridient in recipe1.NamesOfIngrdients)
         {
-            
+            if (!currentIngridient.Contains(ingridient))
+            {
+                
+                ingridentsMatch = false;
+            }
+                
+        }
+
+        if (ingridentsMatch)
+        {
+            SkullTonic.SetActive(true);
         }
     }
 
-    public void UpdateIngridients()
+   /* public void UpdateIngridients()
     {
         IngridientsNeeded.Clear();
         for (int i = 0; i < CurrentNote.NamesOfIngrdients.Length; i++)
@@ -63,7 +76,7 @@ public class Cooker : MonoBehaviour
         {
             
         }
-    }
+    }*/
 }
 
 
