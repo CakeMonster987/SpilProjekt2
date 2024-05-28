@@ -257,7 +257,6 @@ public class Raycast : MonoBehaviour
             {
                 HarKranie = true;
                 Destroy(hit.collider.gameObject);
-                KranieGold.SetActive(true);
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) && hit.collider.gameObject.CompareTag("KranieGold") && HarKranie == true)
@@ -299,14 +298,10 @@ public class Raycast : MonoBehaviour
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
-            hit.collider.gameObject.CompareTag("Cooker") && getEmber == true && getVenom == true && HarKranie == true)
+            hit.collider.gameObject.CompareTag("Cooker") && getEmber == true && getVenom == true && HarKranie == true && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("cooker");
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                
-                KranieGold.SetActive(true);
-            }
+            KranieGold.SetActive(true);
         }
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
