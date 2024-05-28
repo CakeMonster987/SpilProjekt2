@@ -5742,6 +5742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravestone S4
       objectReference: {fileID: 0}
+    - target: {fileID: 3601075098563100067, guid: 4cfb6dcda5190d44cab1749f3a427686, type: 3}
+      propertyPath: m_TagString
+      value: Grave
+      objectReference: {fileID: 0}
     - target: {fileID: 4229520058510731033, guid: 4cfb6dcda5190d44cab1749f3a427686, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -63386,6 +63390,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4528005583773156952, guid: 019de9a3bef75c441be1a5b14092a248, type: 3}
   m_PrefabInstance: {fileID: 1977175210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1977493336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3601075098563100067, guid: 4cfb6dcda5190d44cab1749f3a427686, type: 3}
+  m_PrefabInstance: {fileID: 195334591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977493337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977493336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ce73a3bd49b9e4ca49cba5f3a619ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1977493338
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977493336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bec3059ed39c164b816b00585d5d45d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1980051065
 PrefabInstance:
   m_ObjectHideFlags: 0
