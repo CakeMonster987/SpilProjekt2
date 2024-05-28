@@ -59,7 +59,6 @@ public class Raycast : MonoBehaviour
     public GameObject TP1;
     public GameObject TP2;
     public GameObject Spiller;
-
     private void Start()
     {
         GemOutline.SetActive(false);
@@ -269,6 +268,19 @@ public class Raycast : MonoBehaviour
             {
                 
                 KranieGold.SetActive(true);
+            }
+        }
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
+            hit.collider.gameObject.CompareTag("Grave"))
+        {
+            
+            //sDoorOpen.enabled = true;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                GraveAnim hitGrave = hit.collider.gameObject.GetComponent<GraveAnim>();
+                hitGrave.graveAnimator();
+
             }
         }
     }
