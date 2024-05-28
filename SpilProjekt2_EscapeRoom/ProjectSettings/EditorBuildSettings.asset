@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Johan/Scenes/Menu.unity
+    guid: 0b8630d36b8eba14fb649b82841e0bff
+  - enabled: 1
     path: Assets/Johan/Scenes/Map 1.unity
     guid: 08ce27a00ae6ad54491c2197589da2c3
   - enabled: 1
     path: Assets/Johan/Scenes/Map 2.unity
     guid: 36a4c9399150982448cf460294adf2d9
+  - enabled: 1
+    path: Assets/Hannibal/Scenes/WinScene.unity
+    guid: 0742c7b0eb960324aad9de26a06abd95
   m_configObjects: {}

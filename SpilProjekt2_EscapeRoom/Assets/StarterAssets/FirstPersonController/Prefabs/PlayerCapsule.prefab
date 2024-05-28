@@ -108,7 +108,8 @@ MonoBehaviour:
   wizHarBlomst: 0
   "minN\xF8gle": {fileID: 0}
   dialogueButtonPrompt: {fileID: 0}
-  dialogueObject: {fileID: 0}
+  WizardDialogue: {fileID: 0}
+  SkeletonDialogue: {fileID: 0}
   StenAni: {fileID: 0}
   KnapAni: {fileID: 0}
   HarGem: 0
@@ -118,6 +119,23 @@ MonoBehaviour:
   TeleportEffect: {fileID: 0}
   TeleportTrigger: {fileID: 0}
   PlayerMov: {fileID: 0}
+  Gem2: {fileID: 0}
+  HarGem2: 0
+  Gem2Outline: {fileID: 0}
+  Gem2Sat: {fileID: 0}
+  Gem2Done: 0
+  TeleportEffect2: {fileID: 0}
+  Kranie: {fileID: 0}
+  HarKranie: 0
+  KranieGold: {fileID: 0}
+  HarKG: 0
+  KranieOutline: {fileID: 0}
+  "KranieF\xE6rdig": 0
+  kgDone: {fileID: 0}
+  currentlyHolding: {fileID: 0}
+  lookingAt: {fileID: 0}
+  getEmber: 0
+  getVenom: 0
 --- !u!114 &74757746553897682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +294,7 @@ GameObject:
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 6102456242664669489}
   - component: {fileID: 7510335949793436016}
+  - component: {fileID: 2070685671083813290}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -507,3 +526,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StenAni: {fileID: 0}
+--- !u!114 &2070685671083813290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5904e0077e81d0f47beb703ad74e1230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 0}
