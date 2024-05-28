@@ -85,14 +85,6 @@ public class AN_PlugScript : MonoBehaviour
         else return false;
     }
 
-    private void OnTriggerEntersCollider other)
-    {
-        if (other == Socket)
-        {
-            isConnected = true;
-            follow = false;
-            DoorObject.rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f));
-        }
-        if (OneTime) youCan = false;
-    }
+   
+    
 }
