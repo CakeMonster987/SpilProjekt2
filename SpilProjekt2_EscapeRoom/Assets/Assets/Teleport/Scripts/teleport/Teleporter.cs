@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 namespace Scene_Teleportation_Kit.Scripts.teleport
 {
     public class Teleporter : MonoBehaviour {
-        public Object destinationScene;
+        public string destinationScene;
         public string destSpawnName;
 
         void OnTriggerEnter(Collider collider) {
@@ -22,16 +22,16 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
             }
             teleportable.canTeleport = false;
 
-            if (SceneManager.GetActiveScene().name == destinationScene.name) {
+            if (SceneManager.GetActiveScene().name == destinationScene) {
                 Teleport(teleportable);
             } else {
-                StartCoroutine(TeleportToNewScene(destinationScene.name, teleportable));
+                StartCoroutine(TeleportToNewScene(destinationScene, teleportable));
             }
         }
 
         private IEnumerator TeleportToNewScene(string sceneName, Teleportable teleportable) {
             Scene currentScene = SceneManager.GetActiveScene();
-            AsyncOperation newSceneAsyncLoad = SceneManager.LoadSceneAsync(destinationScene.name);
+            AsyncOperation newSceneAsyncLoad = SceneManager.LoadSceneAsync(destinationScene);
 
             while (!newSceneAsyncLoad.isDone) {
                 yield return null;

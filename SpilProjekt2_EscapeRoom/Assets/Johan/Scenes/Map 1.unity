@@ -22305,8 +22305,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497013542006866420, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
       propertyPath: destinationScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 36a4c9399150982448cf460294adf2d9, type: 3}
+      value: Map 2
+      objectReference: {fileID: 0}
     - target: {fileID: 926392374400953169, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
       propertyPath: m_IsActive
       value: 0

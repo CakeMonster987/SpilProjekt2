@@ -60502,8 +60502,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497013542006866420, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
       propertyPath: destinationScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 0742c7b0eb960324aad9de26a06abd95, type: 3}
+      value: WinScene
+      objectReference: {fileID: 0}
     - target: {fileID: 989505543394194451, guid: 7677de9ad9d871d4c8cf9c862afa2b60, type: 3}
       propertyPath: m_RootOrder
       value: 64
