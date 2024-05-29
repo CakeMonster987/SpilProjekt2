@@ -292,6 +292,7 @@ public class Raycast : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getEmber = true;
+                Destroy(hit.collider.gameObject);
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
@@ -301,6 +302,7 @@ public class Raycast : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 getVenom = true;
+                Destroy(hit.collider.gameObject);
             }
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3) &&
